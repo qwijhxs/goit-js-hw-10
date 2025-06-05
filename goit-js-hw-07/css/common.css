@@ -1,0 +1,159 @@
+/*region common styles*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 16px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #2e2f42;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: #fff;
+
+  cursor: pointer;
+
+  background: #4e75ff;
+
+  transition: background 0.125s ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  font-family: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  transition: border-color 0.125s ease-in-out;
+}
+
+input:hover,
+input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+input::placeholder {
+  color: currentColor;
+}
+
+input,
+#categories .item li /*task-1*/ {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+
+  padding: 8px 16px;
+}
+
+#categories .item h2, /*task-1*/
+#name-input, /*task-3*/
+.widget p /*task-5*/ {
+  margin-bottom: 16px;
+}
+
+#categories .item li:not(:last-child), /*task-1*/
+.login-form label /*task-2*/ {
+  margin-bottom: 8px;
+}
+
+.login-form, /*task-4*/
+.login-form label, /*task-4*/
+.widget /*task-5*/ {
+  display: flex;
+  flex-direction: column;
+}
+
+/*#endregion*/
+
+/*#region task 1*/
+#categories .item:not(:last-child) {
+  margin-bottom: 56px;
+}
+/*endregion*/
+
+/*region task-2*/
+
+/*endregion*/
+
+/*#region task-3*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.gallery div {
+  display: flex;
+  align-items: center;
+  flex-basis: calc((100% - 44px * 2) / 3);
+}
+/*endregion*/
+
+/*#region task-4*/
+.login-form {
+  width: 360px;
+}
+
+.login-form label input,
+.login-form button {
+  margin-top: 8px;
+}
+
+.login-form button {
+  width: 87px;
+}
+/*endregion*/
+
+/*region task-5*/
+.widget {
+  width: 169px;
+}
+
+.change-color {
+  margin: 0 auto;
+}
+/*endregion*/
