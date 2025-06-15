@@ -1,29 +1,54 @@
 .back-link {
-  position: relative;
-  display: inline-block;
-  padding: 4px 8px;
-  margin-top: 32px;
-  border: 1px solid;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  margin: 24px 0 24px 24px;
+  padding: 8px 28px 8px 38px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6366f1;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(99,102,241,0.07);
+  position: relative;
 }
+
 .back-link::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 16px;
+  transform: translateY(-50%);
   width: 16px;
   height: 16px;
-
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'/%3E%3C/svg%3E");
-  transition: 300ms ease-in;
-  transition-property: opacity;
-  opacity: 0;
-  animation: slide 500ms linear infinite alternate-reverse both;
-  animation-play-state: paused;
+  background-size: 16px 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%236366f1' viewBox='0 0 320 512'%3E%3Cpath d='M34.52 239l194.3-194.3c9.373-9.373 24.57-9.373 33.94 0l22.63 22.63c9.373 9.373 9.373 24.57 0 33.94L131.5 256l153.9 153.9c9.373 9.373 9.373 24.57 0 33.94l-22.63 22.63c-9.373 9.373-24.57 9.373-33.94 0l-194.3-194.3c-9.373-9.373-9.373-24.57 0-33.94z'/%3E%3C/svg%3E");
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
-.back-link:hover::before {
+
+.back-link:hover,
+.back-link:focus {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.13);
+  outline: none;
+}
+
+.back-link:hover::before,
+.back-link:focus::before {
   opacity: 1;
-  animation-play-state: running;
+  filter: brightness(1.2);
 }
